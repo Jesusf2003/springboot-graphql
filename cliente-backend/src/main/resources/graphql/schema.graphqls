@@ -1,0 +1,20 @@
+type Cliente {
+    id: ID!
+    names: String
+    matLnames: String
+    patLnames: String
+    cellphone: String
+    dni: String
+    address: String
+}
+
+type Query {
+    findAll: [Cliente],
+    findById(id: Int!): Cliente
+}
+
+type Mutation {
+    create(names: String, matLnames: String, patLnames: String, cellphone: String, dni: String, address: String): Cliente
+    update(id: ID!, names: String, matLnames: String, patLnames: String, cellphone: String, dni: String, address: String): Cliente
+    delete(id: ID!): Boolean
+}
